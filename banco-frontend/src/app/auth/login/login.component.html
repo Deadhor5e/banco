@@ -1,0 +1,30 @@
+<div class="container mt-4">
+<form>
+
+<h2 class="text-center">Login </h2>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input  [(ngModel)]="mail" [ngModelOptions]="{standalone: true}"  type="email" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input   [(ngModel)]="password" [ngModelOptions]="{standalone: true}"  type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+   
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button  (click)="logearse()" type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+</form>
+</div>

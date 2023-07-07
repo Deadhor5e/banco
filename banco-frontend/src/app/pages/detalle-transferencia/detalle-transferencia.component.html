@@ -1,0 +1,10 @@
+<div class="container">
+  <div  *ngIf="transferencia" class="row">
+  <h1>Detalles : transferencia</h1>
+  <h2>Concepto :{{ transferencia.concepto }} </h2> 
+  <h2>Importe : {{ transferencia.importe | currency : "EUR" }}</h2>
+  <h2>Fecha : {{ transferencia.fecha | date : "shortDate" }}</h2>
+
+  
+
+</div>

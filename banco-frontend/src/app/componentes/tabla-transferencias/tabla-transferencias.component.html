@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+     
+      <div id="no-more-tables">
+          <table class="col-md-12 table-bordered table-striped table-condensed cf">
+          <thead class="cf">
+            <tr>
+             
+              <th class="numeric">Concepto</th>
+              <th class="numeric">Importe</th>
+              <th class="numeric">Beneficiario</th>
+              <th class="numeric">Ordenante</th>
+              <th class="numeric">Fecha</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr  *ngFor="let transferencia of transferencias">
+              <td>{{ transferencia.concepto }}</td>
+              <td>{{ transferencia.importe | currency:'EUR' }}</td>
+              <td>{{ transferencia.beneficiario.usuario }}</td>
+              <td>{{ transferencia.ordenante.usuario  }}</td>
+              <td>{{transferencia.fecha   | date:'short'}}</td>
+              <a href="/pages/detalles/{{transferencia.id}}">Detalles</a>
+
+            </tr>
+  
+           
+           
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+</div>
